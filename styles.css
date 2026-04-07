@@ -66,10 +66,32 @@ body {
   font-size: 17px;
   color: var(--blue-500);
 }
-.topbar-product {
-  font-size: 13.5px;
-  font-weight: 600;
+.topbar-brand {
+  font-size: 14px;
+  font-weight: 700;
   letter-spacing: .2px;
+}
+.topbar-tabs {
+  display: flex;
+  gap: 2px;
+  margin-left: 16px;
+  padding-left: 16px;
+  border-left: 1px solid rgba(255,255,255,.15);
+}
+.topbar-tab {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--gray-400);
+  text-decoration: none;
+  padding: 4px 12px;
+  border-radius: 5px;
+  transition: background .15s ease, color .15s ease;
+}
+.topbar-tab:hover { background: rgba(255,255,255,.08); color: var(--gray-300); }
+.topbar-tab--active {
+  background: rgba(255,255,255,.12);
+  color: var(--white);
+  font-weight: 600;
 }
 .topbar-right { display: flex; align-items: center; gap: 8px; }
 .btn-reset {
