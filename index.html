@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiCA Readiness Workspace — NorthCrypto</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="topbar-logo">◈</span>
+      <span class="topbar-product">MiCA Readiness Workspace</span>
+    </div>
+    <div class="topbar-right">
+      <button class="btn-reset" id="resetBtn" title="Reset demo state">↺ Reset</button>
+    </div>
+  </header>
+
+  <div class="app-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <!-- Company block -->
+      <div class="sb-block sb-company">
+        <div class="sb-company-name">NorthCrypto</div>
+        <div class="sb-company-meta">5-person crypto exchange · Latvia</div>
+      </div>
+
+      <!-- Scope block -->
+      <div class="sb-block sb-scope">
+        <div class="sb-label">Application</div>
+        <div class="sb-scope-row"><span class="sb-dim">Authority</span> Latvijas Banka</div>
+        <div class="sb-scope-row"><span class="sb-dim">License</span> MiCA CASP</div>
+        <div class="sb-scope-row sb-scope-services">
+          <span class="sb-dim">Services</span>
+          <span>Exchange · Custody · Transfer</span>
+        </div>
+      </div>
+
+      <!-- Workstream nav -->
+      <div class="sb-block sb-nav">
+        <div class="sb-label">Workstreams</div>
+        <nav id="wsNav" class="sb-ws-nav"></nav>
+      </div>
+
+    </aside>
+
+    <!-- Main workspace -->
+    <main class="workspace">
+
+      <!-- Readiness strip -->
+      <div class="readiness-strip" id="readinessStrip">
+        <div class="rs-ring-wrap">
+          <svg class="rs-ring" viewBox="0 0 80 80">
+            <circle class="rs-ring-bg" cx="40" cy="40" r="34" />
+            <circle class="rs-ring-fill" id="progressRing" cx="40" cy="40" r="34" />
+          </svg>
+          <div class="rs-ring-text"><span id="scoreValue">67</span>%</div>
+        </div>
+        <div class="rs-copy">
+          <div class="rs-headline" id="rsHeadline">
+            <span id="scoreHighlight">67%</span> ready for MiCA application
+          </div>
+          <div class="rs-meta">
+            <span class="rs-badge" id="statusBadge">Partially prepared</span>
+            <span class="rs-hint" id="actionsHint">⚡ 2 actions available</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content area: two columns -->
+      <div class="ws-content">
+
+        <!-- Left: selected workstream detail -->
+        <div class="ws-detail-panel" id="wsDetailPanel">
+          <!-- filled by JS -->
+        </div>
+
+        <!-- Right: actions panel -->
+        <div class="actions-panel" id="actionsPanel">
+          <div class="panel-label">Actions</div>
+          <div id="actionsContainer"></div>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
