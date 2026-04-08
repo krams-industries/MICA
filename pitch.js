@@ -55,4 +55,20 @@
 
   const marketSection = document.querySelector('.market-visual');
   if (marketSection) barObs.observe(marketSection);
+
+  // Mobile scroll cue — hide after user scrolls past hero
+  const scrollCue = document.getElementById('scrollCue');
+  if (scrollCue) {
+    let hidden = false;
+    window.addEventListener('scroll', function () {
+      if (hidden) return;
+      if (window.scrollY > window.innerHeight * 0.3) {
+        scrollCue.classList.add('hidden');
+        hidden = true;
+        setTimeout(function () {
+          scrollCue.style.display = 'none';
+        }, 500);
+      }
+    }, { passive: true });
+  }
 })();
